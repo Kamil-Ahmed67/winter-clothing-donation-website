@@ -14,13 +14,13 @@ const MainLayout = () => {
         AOS.refresh();
     }, []);
     return (
-        <div className="font-poppins">
+        <div className="font-poppins bg-[#eff0f7] ">
             <header className="bg-[#eff0f7] ">
                 <nav className="w-11/12 mx-auto">
                     <Navbar></Navbar>
                 </nav>
             </header>
-            <main className="min-h-[calc(120vh-200px)]">
+            <main className="min-h-[calc(200vh-200px)]">
                 <Outlet></Outlet>
             </main>
             <footer>
