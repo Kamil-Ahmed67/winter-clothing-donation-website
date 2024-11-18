@@ -12,7 +12,7 @@ const Footer = () => {
                 <div className="absolute  inset-x-0 -top-40 flex justify-center">
                     <div className="p-2 border-2 border-white rounded-2xl">
                         <div  style={{ backgroundImage: `url(${snow})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}
-                         className="relative w-full md:w-[1200px]   p-10 rounded-xl bg-[#eff0f7]">
+                         className="relative w-full md:w-[1200px]   p-10 rounded-xl bg-[#e1eeff]">
                             <div className="relative z-10 md:p-8">
                                 <h3 className="text-lg md:text-3xl font-bold text-center text-gray-800 mb-2">Subscribe to Cozy Care</h3>
                                 <p className="text-gray-600 text-sm md:text-base mb-4 text-center">Stay updated on how your small efforts make a big difference</p>
