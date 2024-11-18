@@ -2,6 +2,7 @@ import { ImFacebook2 } from 'react-icons/im';
 import logo from '../../assets/logo.png'
 import { BsInstagram } from 'react-icons/bs';
 import { FaSquareXTwitter } from 'react-icons/fa6';
+import snow from '../../assets/snow.png'
 const Footer = () => {
     return (
         <div className="bg-gradient-to-r from-gray-700 via-gray-600 to-gray-800">
@@ -10,7 +11,8 @@ const Footer = () => {
                 {/*News Letter Section */}
                 <div className="absolute  inset-x-0 -top-40 flex justify-center">
                     <div className="p-2 border-2 border-white rounded-2xl">
-                        <div className="relative w-full md:w-[1200px]   p-10 rounded-xl bg-[#eff0f7] bg-[url('I:\PH\React-Projects\winter-clothing-donation-website\src\assets\snow.png')] object-cover bg-no-repeat">
+                        <div  style={{ backgroundImage: `url(${snow})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}
+                         className="relative w-full md:w-[1200px]   p-10 rounded-xl bg-[#eff0f7]">
                             <div className="relative z-10 md:p-8">
                                 <h3 className="text-lg md:text-3xl font-bold text-center text-gray-800 mb-2">Subscribe to Cozy Care</h3>
                                 <p className="text-gray-600 text-sm md:text-base mb-4 text-center">Stay updated on how your small efforts make a big difference</p>
