@@ -3,7 +3,7 @@ const About = () => {
         <div>
             {/* Title */}
             <div>
-                <h3 className="text-2xl text-center md:text-3xl lg:text-5xl font-semibold lg:font-bold text-gray-900">
+                <h3 className="text-2xl text-center md:text-3xl lg:text-4xl font-semibold lg:font-bold text-gray-800">
                     About Us
                 </h3>
             </div>

@@ -1,0 +1,111 @@
+[
+    {
+      "id": 1,
+      "title": "Winter Warmth for Dhaka",
+      "image": "https://example.com/images/dhaka-winter-campaign.jpg",
+      "description": "Providing warm clothing and blankets for underprivileged families in Dhaka.",
+      "status": "Active",
+      "contactInfo": "+880123456789",
+      "division": "Dhaka"
+    },
+    {
+      "id": 2,
+      "title": "Sylhet Cozy Care Drive",
+      "image": "https://example.com/images/sylhet-campaign.jpg",
+      "description": "Supporting Sylhet's rural communities with essential winter clothing.",
+      "status": "Upcoming",
+      "contactInfo": "+880987654321",
+      "division": "Sylhet"
+    },
+    {
+      "id": 3,
+      "title": "Chattogram Warm Hearts",
+      "image": "https://example.com/images/chattogram-campaign.jpg",
+      "description": "Distributing coats and blankets to children in Chattogram.",
+      "status": "Ongoing",
+      "contactInfo": "+8801122334455",
+      "division": "Chattogram"
+    },
+    {
+      "id": 4,
+      "title": "Rajshahi Winter Aid",
+      "image": "https://example.com/images/rajshahi-campaign.jpg",
+      "description": "Helping Rajshahi's elderly stay warm this winter season.",
+      "status": "Completed",
+      "contactInfo": "+8805566778899",
+      "division": "Rajshahi"
+    },
+    {
+      "id": 5,
+      "title": "Khulna Comfort Campaign",
+      "image": "https://example.com/images/khulna-campaign.jpg",
+      "description": "A community initiative to collect and distribute warm clothes in Khulna.",
+      "status": "Active",
+      "contactInfo": "+8802233445566",
+      "division": "Khulna"
+    },
+    {
+      "id": 6,
+      "title": "Barisal Blanket Drive",
+      "image": "https://example.com/images/barisal-campaign.jpg",
+      "description": "Blanket distribution to remote villages in Barisal.",
+      "status": "Upcoming",
+      "contactInfo": "+8806677889900",
+      "division": "Barisal"
+    },
+    {
+      "id": 7,
+      "title": "Rangpur Care Initiative",
+      "image": "https://example.com/images/rangpur-campaign.jpg",
+      "description": "Providing warm clothing to families in need in Rangpur.",
+      "status": "Active",
+      "contactInfo": "+8809988776655",
+      "division": "Rangpur"
+    },
+    {
+      "id": 8,
+      "title": "Mymensingh Winter Relief",
+      "image": "https://example.com/images/mymensingh-campaign.jpg",
+      "description": "Helping communities in Mymensingh stay warm during the cold season.",
+      "status": "Ongoing",
+      "contactInfo": "+8803344556677",
+      "division": "Mymensingh"
+    },
+    {
+        "id": 9,
+        "title": "Comilla Blanket Initiative",
+        "image": "https://example.com/images/comilla-campaign.jpg",
+        "description": "Distributing blankets and warm clothing to underserved families in Comilla.",
+        "status": "Active",
+        "contactInfo": "+8804455667788",
+        "division": "Comilla"
+      },
+      {
+        "id": 10,
+        "title": "Faridpur Winter Drive",
+        "image": "https://example.com/images/faridpur-campaign.jpg",
+        "description": "Helping Faridpur's underprivileged communities battle the cold with essential winter items.",
+        "status": "Upcoming",
+        "contactInfo": "+8802233446677",
+        "division": "Faridpur"
+      },
+      {
+        "id": 11,
+        "title": "Jessore Cozy Care Program",
+        "image": "https://example.com/images/jessore-campaign.jpg",
+        "description": "Providing coats and warm clothing for the vulnerable groups in Jessore.",
+        "status": "Completed",
+        "contactInfo": "+8806677883344",
+        "division": "Jessore"
+      },
+      {
+        "id": 12,
+        "title": "Noakhali Warm Hearts Campaign",
+        "image": "https://example.com/images/noakhali-campaign.jpg",
+        "description": "Delivering winter essentials to families in remote areas of Noakhali.",
+        "status": "Ongoing",
+        "contactInfo": "+8805566772233",
+        "division": "Noakhali"
+      }
+  ]
+  
