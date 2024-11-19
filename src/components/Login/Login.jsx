@@ -1,8 +1,24 @@
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../provider/AuthProvider";
 
 const Login = () => {
+    const{userLogin,setUser}=useContext(AuthContext);
+    const[error,setError]=useState({})
     const handleLogin=e=>{
         e.preventDefault();
+        //getting the form data
+        const form=e.target;
+        const email=form.email.value;
+        const password=form.password.value;
+        userLogin(email,password)
+        .then(result=>{
+         const user=result.user;
+         setUser(user)
+        })
+        .catch((err)=>{
+           setError({...error,login:err.code})
+        })
     }
     return (
         <div  data-aos="zoom-in" className="min-h-screen flex justify-center items-center">
@@ -20,11 +36,11 @@ const Login = () => {
                             <span className="label-text">Password</span>
                         </label>
                         <input name="password" type="password" placeholder="password" className="input input-bordered" required />
-                        {/* {error.login && (
+                        {error.login && (
                             <label className="label text-sm text-red-600 ">
                                 {error.login}
                             </label>
-                        )} */}
+                        )}
                         <label className="label">
                             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                         </label>
