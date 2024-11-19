@@ -1,8 +1,25 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../provider/AuthProvider";
 
 const Register = () => {
+    const {registerNewUser}=useContext(AuthContext);
     const handleRegister=e=>{
         e.preventDefault();
+        //getting data from the Form
+        const form=new FormData(e.target);
+        const name=form.get("name");
+        const photo=form.get("photo");
+        const email=form.get("email");
+        const password=form.get("password");
+        registerNewUser(email,password)
+        .then(result=>{
+            const user=result.user;
+            console.log(user)
+        })
+        .catch(error =>{
+            console.log("ERROR OCCUR",error.message)
+        })
     }
     return (
         <div  data-aos="zoom-in" className="min-h-screen flex justify-center items-center">

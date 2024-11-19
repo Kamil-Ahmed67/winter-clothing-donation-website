@@ -1,7 +1,10 @@
 import { Link, NavLink } from 'react-router-dom';
 import iconLogo from '../../assets/icon-2.png'
 import { FaUserCircle } from 'react-icons/fa';
+import { useContext } from 'react';
+import { AuthContext } from '../../provider/AuthProvider';
 const Navbar = () => {
+    const{user}=useContext(AuthContext)
     return (
         <div className="navbar ">
             <div className="navbar-start">
@@ -38,7 +41,21 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end gap-2">
-            <FaUserCircle className='text-4xl' /><Link to="/auth/login" className="btn bg-[#3d84a8] text-sm lg:text-base text-gray-50">Login</Link>
+                <div>
+                {
+                    user && user?.email? 
+                    <div>
+                       <img className='w-10 rounded-full' src={user?.photoURL} alt="" srcset="" /> 
+                    </div>
+                    : <FaUserCircle className='text-4xl' />
+                }
+                </div>
+                {
+                user && user?.email?(
+                  <button onClick={logout} className="btn btn-neutral rounded-none" >Logout</button>
+                ): 
+               ( <Link to="/auth/login" className="btn bg-[#3d84a8] text-sm lg:text-base text-gray-50">Login</Link>)
+              }
             </div>
         </div>
     );
