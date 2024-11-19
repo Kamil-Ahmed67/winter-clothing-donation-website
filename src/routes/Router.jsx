@@ -7,10 +7,12 @@ import Campaigns from "../pages/Campaigns";
 import AuthLayout from "../layouts/AuthLayout";
 import Login from "../components/Login/Login";
 import Register from "../components/Register/Register";
+import Error from "../components/Error/Error";
   const router = createBrowserRouter([
     {
       path: "/",
       element:<MainLayout></MainLayout>,
+      errorElement:<Error></Error>,
       children:[
         {
           path:"/",
@@ -26,6 +28,7 @@ import Register from "../components/Register/Register";
     {
       path:"/auth",
       element:<AuthLayout></AuthLayout>,
+      errorElement:<Error></Error>,
       children:[
         {
           path:"/auth/login",
