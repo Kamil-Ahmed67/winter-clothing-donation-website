@@ -4,7 +4,7 @@ import { FaUserCircle } from 'react-icons/fa';
 import { useContext } from 'react';
 import { AuthContext } from '../../provider/AuthProvider';
 const Navbar = () => {
-    const{user}=useContext(AuthContext)
+    const {user,logout}=useContext(AuthContext)
     return (
         <div className="navbar ">
             <div className="navbar-start">
