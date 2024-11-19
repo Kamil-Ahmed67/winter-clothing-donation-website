@@ -20,7 +20,7 @@ const MainLayout = () => {
                     <Navbar></Navbar>
                 </nav>
             </header>
-            <main className="min-h-[calc(200vh-200px)]">
+            <main className="min-h-[calc(350vh-200px)]">
                 <Outlet></Outlet>
             </main>
             <footer>

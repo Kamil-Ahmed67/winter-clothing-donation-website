@@ -49,7 +49,7 @@ const HowItWorks = () => {
                         </figure>
                     </div>
                 </div>
-                <div data-aos="fade-down" className='col-span-8 lg:col-span-4 bg-[#e1eeff] rounded-2xl '>
+                <div data-aos="fade-down" className='col-span-8 lg:col-span-4 bg-gradient-to-r from-sky-300 via-sky-200 to-sky-300 rounded-2xl '>
                     <div className='p-5' >
                         <h3 className="text-2xl font-semibold mb-4">Supported Divisions</h3>
                         <p className="mb-4">
