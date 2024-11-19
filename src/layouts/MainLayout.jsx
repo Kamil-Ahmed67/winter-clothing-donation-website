@@ -7,9 +7,8 @@ import { useEffect } from "react";
 const MainLayout = () => {
     useEffect(() => {
         AOS.init({
-            duration: 1300, // Animation duration in milliseconds
-            once: true, // Whether animation should happen only once
-            //offset: 50,
+            duration: 1300,
+            once: true,
         });
         AOS.refresh();
     }, []);

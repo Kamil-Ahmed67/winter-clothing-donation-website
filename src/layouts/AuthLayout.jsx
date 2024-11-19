@@ -1,7 +1,16 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar/Navbar";
-
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const AuthLayout = () => {
+    useEffect(() => {
+        AOS.init({
+            duration: 1300,
+            once: true,
+        });
+        AOS.refresh();
+    }, []);
     return (
         <div className="font-poppins bg-[#eff0f7] ">
             <header className="bg-[#eff0f7] ">
@@ -9,7 +18,7 @@ const AuthLayout = () => {
                     <Navbar></Navbar>
                 </nav>
             </header>
-            <div className="min-h-[calc(350vh-200px)]">
+            <div className="min-h-[calc(100vh-200px)]">
                 <Outlet></Outlet>
             </div> 
         </div>

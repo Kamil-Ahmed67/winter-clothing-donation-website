@@ -6,6 +6,7 @@ import Home from "../pages/Home";
 import Campaigns from "../pages/Campaigns";
 import AuthLayout from "../layouts/AuthLayout";
 import Login from "../components/Login/Login";
+import Register from "../components/Register/Register";
   const router = createBrowserRouter([
     {
       path: "/",
@@ -29,6 +30,10 @@ import Login from "../components/Login/Login";
         {
           path:"/auth/login",
           element:<Login></Login>
+        },
+        {
+          path:"/auth/register",
+          element:<Register></Register>
         }
       ]
     }
