@@ -4,6 +4,8 @@ import {
 import MainLayout from "../layouts/MainLayout";
 import Home from "../pages/Home";
 import Campaigns from "../pages/Campaigns";
+import AuthLayout from "../layouts/AuthLayout";
+import Login from "../components/Login/Login";
   const router = createBrowserRouter([
     {
       path: "/",
@@ -18,7 +20,17 @@ import Campaigns from "../pages/Campaigns";
           element:<Campaigns></Campaigns>,
           loader:()=>fetch('../public/aid.json')
         }
-      ]
+      ],
     },
+    {
+      path:"/auth",
+      element:<AuthLayout></AuthLayout>,
+      children:[
+        {
+          path:"/auth/login",
+          element:<Login></Login>
+        }
+      ]
+    }
   ]);
   export default router;
