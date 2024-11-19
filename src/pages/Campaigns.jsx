@@ -4,7 +4,6 @@ import CampaignCard from '../components/CampaignCard/CampaignCard';
 
 const Campaigns = () => {
     const donations=useLoaderData();
-    console.log(donations)
     return (
         <div className='w-11/12 mx-auto'>
             campaigns

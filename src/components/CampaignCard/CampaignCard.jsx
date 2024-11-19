@@ -1,5 +1,8 @@
+import { Link } from "react-router-dom";
+
 const CampaignCard = ({ donation }) => {
     const {
+        id,
         title,
         image,
         description,
@@ -36,7 +39,7 @@ const CampaignCard = ({ donation }) => {
                 </div>
                 <p className="text-sm text-gray-500 mt-2">Contact: {contactInfo}</p>
                 <div className="card-actions justify-start mt-2">
-                    <button className="btn bg-[#3d84a8] text-gray-50 ">Donate Now</button>
+                    <Link to={`/donation/${id}`} className="btn bg-[#3d84a8] text-gray-50 ">Donate Now</Link>
                 </div>
             </div>
         </div>

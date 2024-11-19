@@ -8,6 +8,7 @@ import AuthLayout from "../layouts/AuthLayout";
 import Login from "../components/Login/Login";
 import Register from "../components/Register/Register";
 import Error from "../components/Error/Error";
+import DonationDetails from "../pages/DonationDetails";
   const router = createBrowserRouter([
     {
       path: "/",
@@ -24,6 +25,11 @@ import Error from "../components/Error/Error";
           loader:()=>fetch('../public/aid.json')
         }
       ],
+    },
+    {
+      path:"/donation/:donationId",
+      element:<DonationDetails></DonationDetails>,
+      loader:()=>fetch('../public/aid.json')
     },
     {
       path:"/auth",
