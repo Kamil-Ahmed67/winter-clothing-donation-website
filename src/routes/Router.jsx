@@ -10,6 +10,7 @@ import Register from "../components/Register/Register";
 import Error from "../components/Error/Error";
 import DonationDetails from "../pages/DonationDetails";
 import PrivateRouter from "./PrivateRouter";
+import Help from "../pages/Help";
   const router = createBrowserRouter([
     {
       path: "/",
@@ -24,6 +25,10 @@ import PrivateRouter from "./PrivateRouter";
           path:"/campaigns",
           element:<Campaigns></Campaigns>,
           loader:()=>fetch('../public/aid.json')
+        },
+        {
+          path:"/help",
+          element:<Help></Help>
         }
       ],
     },

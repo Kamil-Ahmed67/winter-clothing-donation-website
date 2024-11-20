@@ -4,6 +4,7 @@ import Footer from "../components/Footer/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { Toaster } from "react-hot-toast";
 const MainLayout = () => {
     useEffect(() => {
         AOS.init({
@@ -25,6 +26,7 @@ const MainLayout = () => {
             <footer>
                 <Footer></Footer>
             </footer>  
+            <Toaster />
         </div>
         
     );

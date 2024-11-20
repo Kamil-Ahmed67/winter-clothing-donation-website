@@ -3,6 +3,8 @@ import Navbar from "../components/Navbar/Navbar";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 const AuthLayout = () => {
     useEffect(() => {
         AOS.init({
@@ -21,6 +23,7 @@ const AuthLayout = () => {
             <div className="min-h-[calc(100vh-200px)]">
                 <Outlet></Outlet>
             </div> 
+            <ToastContainer position="top-center"  />
         </div>
     );
 };
