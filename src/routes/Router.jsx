@@ -9,6 +9,7 @@ import Login from "../components/Login/Login";
 import Register from "../components/Register/Register";
 import Error from "../components/Error/Error";
 import DonationDetails from "../pages/DonationDetails";
+import PrivateRouter from "./PrivateRouter";
   const router = createBrowserRouter([
     {
       path: "/",
@@ -28,7 +29,7 @@ import DonationDetails from "../pages/DonationDetails";
     },
     {
       path:"/donation/:donationId",
-      element:<DonationDetails></DonationDetails>,
+      element:<PrivateRouter><DonationDetails></DonationDetails></PrivateRouter>,
       loader:()=>fetch('../public/aid.json')
     },
     {
