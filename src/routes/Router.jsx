@@ -11,6 +11,8 @@ import Error from "../components/Error/Error";
 import DonationDetails from "../pages/DonationDetails";
 import PrivateRouter from "./PrivateRouter";
 import Help from "../pages/Help";
+import Dashboard from "../components/Dashboard/Dashboard";
+import UpdateProfile from "../components/UpdateProfile/UpdateProfile";
   const router = createBrowserRouter([
     {
       path: "/",
@@ -24,18 +26,26 @@ import Help from "../pages/Help";
         {
           path:"/campaigns",
           element:<Campaigns></Campaigns>,
-          loader:()=>fetch('../public/aid.json')
+          loader:()=>fetch('../aid.json')
         },
         {
           path:"/help",
           element:<Help></Help>
         }
-      ],
+      ]
     },
     {
       path:"/donation/:donationId",
       element:<PrivateRouter><DonationDetails></DonationDetails></PrivateRouter>,
-      loader:()=>fetch('../public/aid.json')
+      loader:()=>fetch('../aid.json')
+    },
+    {
+      path:"/dashboard",
+      element:<PrivateRouter><Dashboard></Dashboard></PrivateRouter>,
+    },
+    {
+      path: '/update-profile',
+      element: <UpdateProfile></UpdateProfile>,
     },
     {
       path:"/auth",

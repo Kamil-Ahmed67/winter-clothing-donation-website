@@ -29,8 +29,13 @@ const Navbar = () => {
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                         <NavLink to="/">Home</NavLink>
-                        <NavLink to="/campaign">Campaigns</NavLink>
+                        <NavLink to="/campaigns">Campaigns</NavLink>
                         <NavLink to="/help">How to Help</NavLink>
+                        {
+                            user && <>
+                                <NavLink to="/dashboard">Dashboard</NavLink>
+                            </>
+                        }
                     </ul>
                 </div>
                 <NavLink to="/"> <img className='w-44 md:w-48 lg:w-60' src={iconLogo} alt="" srcset="" /></NavLink>
@@ -40,6 +45,12 @@ const Navbar = () => {
                     <NavLink to="/">Home</NavLink>
                     <NavLink to="/campaigns">Campaigns</NavLink>
                     <NavLink to="/help">How to Help</NavLink>
+                    {
+                        user && <>
+                            <NavLink to="/dashboard">Dashboard</NavLink>
+                        </>
+                    }
+
                 </ul>
             </div>
             <div className="navbar-end gap-2 relative">
@@ -61,11 +72,11 @@ const Navbar = () => {
                             >
                                 <li>
                                     <Link
-                                        className="w-full text-end text-gray-700 hover:bg-gray-100 flex items-center justify-end"
+                                        className="w-full text-end text-gray-700 hover:bg-gray-300 flex items-center justify-end"
                                         onClick={logout}>
-                                      <FiLogOut/> Logout
+                                        <FiLogOut /> Logout
                                     </Link>
-                                    <Link className='w-full text-end text-gray-700 hover:bg-gray-100 flex items-center justify-end'
+                                    <Link className='w-full text-end text-gray-700 hover:bg-gray-300 flex items-center justify-end'
                                     >Dashboard</Link>
                                 </li>
                             </ul>

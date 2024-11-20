@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 import google from '../../assets/google-icon.png'
+import { toast } from "react-toastify";
 
 const Login = () => {
     const{userLogin,setUser,signInWithGoogle}=useContext(AuthContext);
@@ -19,11 +20,15 @@ const Login = () => {
         .then(result=>{
          const user=result.user;
          setUser(user);
+         toast.success('Successfully Logged In')
          //sending user to the desired place after successful login or homepage
-         navigate(location?.state? location.state:"/" );
+         setTimeout(() => {
+            navigate(location?.state ? location.state : "/");
+        }, 2000);
         })
         .catch((err)=>{
-           setError({...error,login:err.code})
+           setError({...error,login:err.code});
+           toast.error('Invalid Email or Password')
         })
     }
     //google sign in
@@ -32,10 +37,15 @@ const Login = () => {
         .then(result=>{
             const user=result.user;
             setUser(user);
-            navigate(location?.state? location.state:"/" );
+            toast.success('Google Sign-In Successful!')
+            //sending user to the desired place after successful login or homepage
+            setTimeout(() => {
+               navigate(location?.state ? location.state : "/");
+           }, 2000);
         })
         .catch((err)=>{
-            setError({...error,login:err.code})
+            setError({...error,login:err.code});
+            toast.error('Google Sign-In Failed!')
          })
     }
     return (
