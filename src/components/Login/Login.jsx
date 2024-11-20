@@ -1,10 +1,14 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
+import google from '../../assets/google-icon.png'
 
 const Login = () => {
-    const{userLogin,setUser}=useContext(AuthContext);
-    const[error,setError]=useState({})
+    const{userLogin,setUser,signInWithGoogle}=useContext(AuthContext);
+    const[error,setError]=useState({});
+    //sending back user to the place/element,when he clicked it and login form shown
+    const location=useLocation();
+    const navigate=useNavigate();
     const handleLogin=e=>{
         e.preventDefault();
         //getting the form data
@@ -14,16 +18,30 @@ const Login = () => {
         userLogin(email,password)
         .then(result=>{
          const user=result.user;
-         setUser(user)
+         setUser(user);
+         //sending user to the desired place after successful login or homepage
+         navigate(location?.state? location.state:"/" );
         })
         .catch((err)=>{
            setError({...error,login:err.code})
         })
     }
+    //google sign in
+    const handleGoogleSignIn=()=>{
+        signInWithGoogle()
+        .then(result=>{
+            const user=result.user;
+            setUser(user);
+            navigate(location?.state? location.state:"/" );
+        })
+        .catch((err)=>{
+            setError({...error,login:err.code})
+         })
+    }
     return (
         <div  data-aos="zoom-in" className="min-h-screen flex justify-center items-center">
             <div className="card bg-base-100 w-full max-w-lg shrink-0 rounded-xl p-10">
-                <h2 className="text-2xl text-[#3d84a8] font-semibold text-center mt-6">Login your account</h2>
+                <h2 className="text-3xl text-[#3d84a8] font-semibold text-center mt-6">Login</h2>
                 <form onSubmit={handleLogin} className="card-body">
                     <div className="form-control">
                         <label className="label">
@@ -50,7 +68,9 @@ const Login = () => {
                     </div>
                     <div className="divider">OR</div>
                     <div className="form-control">
-                        <button className="btn bg-[#3d84a8] text-sm lg:text-base text-gray-50 rounded-lg">Login With Google</button>
+                        <button onClick={handleGoogleSignIn}
+                         className="btn bg-base-100 text-sm lg:text-base text-gray-800 rounded-lg">
+                        <img className="w-7 h-7 rounded-full" src={google} alt="" srcset="" /> Sign in With Google</button>
                     </div>
                 </form>
                 <p className="text-center font-semibold">
