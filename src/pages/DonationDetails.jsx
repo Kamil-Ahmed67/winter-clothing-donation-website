@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import Navbar from "../components/Navbar/Navbar";
+import formImg from "../assets/donate-form.jpg"
+import Footer from "../components/Footer/Footer";
+import { toast, ToastContainer } from "react-toastify";
 const DonationDetails = () => {
     const { donationId } = useParams();
     const donationData = useLoaderData();
@@ -30,10 +33,10 @@ const DonationDetails = () => {
             <header className="w-11/12 mx-auto">
                 <Navbar></Navbar>
             </header>
-            <div className="flex flex-col lg:flex-row">
+            <div className="flex flex-col">
                 {/* Donation Details */}
-                <div className="w-full lg:w-1/2 bg-red-500">
-                    <div className="card p-5">
+                <div className="w-full">
+                    <div>
                         <figure className="relative">
                             <img
                                 src={image}
@@ -52,68 +55,76 @@ const DonationDetails = () => {
                                 <h2 className="text-lg lg:text-xl text-gray-900 font-semibold">Contact:</h2><span className="text-lg lg:text-xl text-gray-600">{contactInfo}</span>
                             </div>
                             <div className="card-actions justify-start mt-2">
-                                {/* <Link to={`/donation/${id}`} className="btn bg-[#3d84a8] text-gray-50 ">Donate Now</Link> */}
                             </div>
                         </div>
                     </div>
                 </div>
                 {/* Donation Form */}
-                <div className="w-full lg:w-1/2 bg-green-500">
-                    <div className="p-5">
-                        <form onSubmit={handleSubmit} className="p-4 space-y-4 bg-gray-100 rounded">
-                            <h2 className="text-lg font-bold">Donation Form</h2>
-
-                            <input
-                                type="number"
-                                name="quantity"
-                                value={formData.quantity}
-                                onChange={handleChange}
-                                required
-                                placeholder="Quantity (e.g., 2)"
-                                className="w-full border px-3 py-2 rounded"
+                <div>
+                    <h3 className="text-center text-4xl text-gray-800 font-semibold lg:font-bold mb-6">Donation Form</h3>
+                    <div className="card lg:card-side bg-[#eff0f7]  shadow-xl max-w-4xl mx-auto">
+                        <figure className="w-full lg:w-2/4">
+                            <img
+                                src={formImg}
+                                alt="Donation"
+                                className="object-cover w-full h-full"
                             />
-
-                            <select
-                                name="itemType"
-                                value={formData.itemType}
-                                onChange={handleChange}
-                                required
-                                className="w-full border px-3 py-2 rounded"
-                            >
-                                <option value="">Select Item Type</option>
-                                <option value="Blanket">Blanket</option>
-                                <option value="Jacket">Jacket</option>
-                                <option value="Sweater">Sweater</option>
-                            </select>
-
-                            <input
-                                type="text"
-                                name="pickupLocation"
-                                value={formData.pickupLocation}
-                                onChange={handleChange}
-                                required
-                                placeholder="Pickup Location"
-                                className="w-full border px-3 py-2 rounded"
-                            />
-
-                            <textarea
-                                name="additionalNotes"
-                                value={formData.additionalNotes}
-                                onChange={handleChange}
-                                placeholder="Additional Notes (Optional)"
-                                className="w-full border px-3 py-2 rounded"
-                            ></textarea>
-
-                            <button
-                                type="submit"
-                                className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600"
-                            >
-                                Submit
-                            </button>
-                        </form>
+                        </figure>
+                        <div className="card-body lg:w-1/2 flex justify-center items-center">
+                            <form onSubmit={handleSubmit} className="space-y-6 w-full px-6">
+                                <input
+                                    type="number"
+                                    name="quantity"
+                                    value={formData.quantity}
+                                    onChange={handleChange}
+                                    required
+                                    placeholder="Quantity (e.g., 2)"
+                                    className="w-full border-2 border-gray-200 px-3 py-2 rounded-xl"
+                                />
+                                <select
+                                    name="itemType"
+                                    value={formData.itemType}
+                                    onChange={handleChange}
+                                    required
+                                    className="w-full border-2 border-gray-200 px-3 py-2 rounded-xl"
+                                >
+                                    <option value="">Select Item Type</option>
+                                    <option value="Blanket">Blanket</option>
+                                    <option value="Jacket">Jacket</option>
+                                    <option value="Sweater">Sweater</option>
+                                </select>
+                                <input
+                                    type="text"
+                                    name="pickupLocation"
+                                    value={formData.pickupLocation}
+                                    onChange={handleChange}
+                                    required
+                                    placeholder="Pickup Location"
+                                    className="w-full border-2 border-gray-200 px-3 py-2 rounded-xl"
+                                />
+                                <textarea
+                                    name="additionalNotes"
+                                    value={formData.additionalNotes}
+                                    onChange={handleChange}
+                                    placeholder="Additional Notes (Optional)"
+                                    className="w-full border-2 border-gray-200 px-3 py-2 rounded-xl"
+                                ></textarea>
+                                <button
+                                    type="submit"
+                                    className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600"
+                                >
+                                    Submit
+                                </button>
+                            </form>
+                        </div>
                     </div>
                 </div>
+
             </div>
+            <footer className="mt-40">
+                <Footer></Footer>
+            </footer>
+            <ToastContainer position="top-center"  />
         </div>
     );
 };
