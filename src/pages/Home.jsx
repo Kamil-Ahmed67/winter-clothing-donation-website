@@ -1,5 +1,6 @@
 import About from "../components/About/About";
 import Banner from "../components/Banner/Banner";
+import CardSlider from "../components/CardSlider/CardSlider";
 import HowItWorks from "../components/HowItWorks/HowItWorks";
 
 const Home = () => {
@@ -13,6 +14,9 @@ const Home = () => {
             </div>
             <div className="w-11/12 mx-auto mt-8">
                 <HowItWorks></HowItWorks>
+            </div>
+            <div className="w-11/12 mx-auto mt-16 mb-60">
+              <CardSlider></CardSlider>
             </div>
         </div>
     );

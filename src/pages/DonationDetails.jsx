@@ -95,7 +95,7 @@ const DonationDetails = () => {
                 </div>
 
                 {/* Donation Form */}
-                <div>
+                <div className="p-12 lg:p-0">
                     <h3 className="text-center text-4xl text-gray-800 font-semibold lg:font-bold mb-8">Donation Form</h3>
                     <div data-aos="zoom-in" className="card lg:card-side bg-[#eff0f7]  shadow-xl max-w-4xl mx-auto">
                         <figure className="w-full lg:w-2/4">
@@ -146,7 +146,7 @@ const DonationDetails = () => {
                                 ></textarea>
                                 <button
                                     type="submit"
-                                    className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600"
+                                    className="w-full bg-[#3d84a8] text-white py-2 rounded hover:bg-gray-600"
                                 >
                                     Submit
                                 </button>

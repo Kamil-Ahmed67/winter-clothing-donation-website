@@ -15,7 +15,7 @@ const MainLayout = () => {
     }, []);
     return (
         <div className="font-poppins bg-[#eff0f7] ">
-            <header className="bg-[#eff0f7]  backdrop-blur-lg sticky top-0 z-50 ">
+            <header className="bg-[#eff0f7] backdrop-blur-lg sticky top-0 z-50  ">
                 <nav className="w-11/12 mx-auto">
                     <Navbar></Navbar>
                 </nav>

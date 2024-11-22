@@ -17,7 +17,7 @@ const Dashboard = () => {
                 <div >
                     {user ? (
                         <div>
-                            <h1 className="text-3xl lg:text-4xl font-bold text-gray-800">
+                            <h1 className="text-3xl lg:text-4xl text-center mb-2 font-bold text-gray-800">
                                 Welcome, {user.displayName || 'User'}!
                             </h1>
 
