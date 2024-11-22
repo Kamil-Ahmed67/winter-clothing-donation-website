@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 import google from '../../assets/google-icon.png'
 import { toast } from "react-toastify";
+import { sendPasswordResetEmail } from "firebase/auth";
 
 const Login = () => {
     const{userLogin,setUser,signInWithGoogle}=useContext(AuthContext);
@@ -48,6 +49,20 @@ const Login = () => {
             toast.error('Google Sign-In Failed!')
          })
     }
+    //Forget Password
+    const handleForgetPassword=()=>{
+        const email=emailRef.current.value
+        if(!email){
+            console.log("Please provide a valid email address")
+        }
+        else{
+            sendPasswordResetEmail(auth,email)
+            .then(()=>{
+                alert('Reset email sent,Check your email')
+            })
+        }
+
+    }
     return (
         <div  data-aos="zoom-in" className="min-h-screen flex justify-center items-center">
             <div className="card bg-base-100 w-full max-w-lg shrink-0 rounded-xl p-10">
@@ -69,7 +84,7 @@ const Login = () => {
                                 {error.login}
                             </label>
                         )}
-                        <label className="label">
+                        <label onClick={handleForgetPassword} className="label">
                             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                         </label>
                     </div>
