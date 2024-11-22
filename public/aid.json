@@ -19,12 +19,12 @@
     },
     {
       "id": 3,
-      "title": "Chattogram Warm Hearts",
+      "title": "Chittagong Warm Hearts",
       "image": "https://i.ibb.co.com/ZKw3Pkn/3-Chittagong.jpg",
       "description": "Distributing coats and blankets to children in Chattogram.",
       "status": "Ongoing",
       "contactInfo": "+8801122334455",
-      "division": "Chattogram"
+      "division": "Chittagong"
     },
     {
       "id": 4,
@@ -55,39 +55,39 @@
     },
     {
       "id": 7,
-      "title": "Rangpur Care Initiative",
+      "title": "Rajshahi Care Initiative",
       "image": "https://i.ibb.co.com/FBnTzcd/7-Rangpur.jpg",
       "description": "Providing warm clothing to families in need in Rangpur.",
       "status": "Active",
       "contactInfo": "+8809988776655",
-      "division": "Rangpur"
+      "division": "Rajshahi"
     },
     {
       "id": 8,
-      "title": "Mymensingh Winter Relief",
+      "title": "Dhaka Winter Relief",
       "image": "https://i.ibb.co.com/PrGVmdx/8-Mymensingh.jpg",
       "description": "Helping communities in Mymensingh stay warm during the cold season.",
       "status": "Ongoing",
       "contactInfo": "+8803344556677",
-      "division": "Mymensingh"
+      "division": "Dhaka"
     },
     {
         "id": 9,
-        "title": "Comilla Blanket Initiative",
+        "title": "Khulna Blanket Initiative",
         "image": "https://i.ibb.co.com/k8X3gnm/9-Comilla.jpg",
         "description": "Distributing blankets and warm clothing to underserved families in Comilla.",
         "status": "Active",
         "contactInfo": "+8804455667788",
-        "division": "Comilla"
+        "division": "Khulna"
       },
       {
         "id": 10,
-        "title": "Faridpur Winter Drive",
+        "title": "Chittagong Winter Drive",
         "image": "https://i.ibb.co.com/TwL0S3w/11-Jessore.png",
         "description": "Helping Faridpur's underprivileged communities battle the cold with essential winter items.",
         "status": "Upcoming",
         "contactInfo": "+8802233446677",
-        "division": "Faridpur"
+        "division": "Chittagong"
       },
       {
         "id": 11,
@@ -100,12 +100,12 @@
       },
       {
         "id": 12,
-        "title": "Noakhali Warm Hearts Campaign",
+        "title": "Barisal Warm Hearts Campaign",
         "image": "https://i.ibb.co.com/ws8qz8M/12-Noakhali.jpg",
         "description": "Delivering winter essentials to families in remote areas of Noakhali.",
         "status": "Ongoing",
         "contactInfo": "+8805566772233",
-        "division": "Noakhali"
+        "division": "Barisal"
       }
   ]
   
