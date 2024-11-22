@@ -42,21 +42,54 @@ const Navbar = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 gap-5 md:text-base lg:text-lg">
-                    <NavLink to="/">Home</NavLink>
-                    <NavLink to="/campaigns">Campaigns</NavLink>
-                    <NavLink to="/help">How to Help</NavLink>
-                    {
-                        user && <>
-                            <NavLink to="/dashboard">Dashboard</NavLink>
-                        </>
-                    }
-
+                    <NavLink
+                        to="/"
+                        className={({ isActive }) =>
+                            isActive
+                                ? "font-semibold text-[#3d84a8]"
+                                : "hover:text-[#3d84a8]"
+                        }
+                    >
+                        Home
+                    </NavLink>
+                    <NavLink
+                        to="/campaigns"
+                        className={({ isActive }) =>
+                            isActive
+                                ? "font-semibold text-[#3d84a8]"
+                                : "hover:text-[#3d84a8]"
+                        }
+                    >
+                        Campaigns
+                    </NavLink>
+                    <NavLink
+                        to="/help"
+                        className={({ isActive }) =>
+                            isActive
+                                ? "font-semibold text-[#3d84a8]"
+                                : "hover:text-[#3d84a8]"
+                        }
+                    >
+                        How to Help
+                    </NavLink>
+                    {user && (
+                        <NavLink
+                            to="/dashboard"
+                            className={({ isActive }) =>
+                                isActive
+                                    ? "font-semibold text-[#3d84a8]"
+                                    : "hover:text-[#3d84a8]"
+                            }
+                        >
+                            Dashboard
+                        </NavLink>
+                    )}
                 </ul>
             </div>
             <div className="navbar-end gap-2 relative">
                 {user?.email ? (
                     <div className="flex items-center gap-2 relative">
-                        <h4>{user.displayName}</h4>
+                        <h4 className='text-lg mr-3'>{user.displayName}</h4>
                         <img
                             className="w-10 h-10 rounded-full cursor-pointer"
                             src={user.photoURL}

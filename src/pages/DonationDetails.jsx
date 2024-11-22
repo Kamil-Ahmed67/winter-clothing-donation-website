@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import Navbar from "../components/Navbar/Navbar";
 import formImg from "../assets/donate-form.jpg"
+import blanket from '../assets/blanket.jpg'
+import jacket from '../assets/jaxcketjpg.jpg'
+import sweater from '../assets/sweater_icon.png'
 import Footer from "../components/Footer/Footer";
 import { toast, ToastContainer } from "react-toastify";
 const DonationDetails = () => {
@@ -59,12 +62,44 @@ const DonationDetails = () => {
                         </div>
                     </div>
                 </div>
+                <h3 className="text-center text-4xl text-gray-800 font-semibold lg:font-bold mb-8">Donation Items</h3>
+                {/* Donation Items */}
+                <div className="flex flex-col lg:flex-row justify-center items-center space-y-6 lg:space-y-0 lg:space-x-20 mb-24 ">
+                    {/* Card 1 */}
+                    <div className="flex flex-col items-center">
+                        <img data-aos="flip-left"
+                            src={blanket}
+                            alt="Card 1"
+                            className="w-40 h-40  rounded-full object-cover"
+                        />
+                        <h3 className="mt-4 text-center text-lg font-semibold">Blanket</h3>
+                    </div>
+                    {/* Card 2 */}
+                    <div className="flex flex-col items-center">
+                        <img data-aos="flip-left"
+                            src={sweater}
+                            alt="Card 2"
+                            className="w-40 h-40 rounded-full object-cover"
+                        />
+                        <h3 className="mt-4 text-center text-lg font-semibold">Sweater</h3>
+                    </div>
+                    {/* Card 3 */}
+                    <div className="flex flex-col items-center">
+                        <img data-aos="flip-left"
+                            src={jacket}
+                            alt="Card 3"
+                            className="w-36 h-36 rounded-full object-cover"
+                        />
+                        <h3 className="mt-4 text-center text-lg font-semibold">Jacket</h3>
+                    </div>
+                </div>
+
                 {/* Donation Form */}
                 <div>
-                    <h3 className="text-center text-4xl text-gray-800 font-semibold lg:font-bold mb-6">Donation Form</h3>
-                    <div className="card lg:card-side bg-[#eff0f7]  shadow-xl max-w-4xl mx-auto">
+                    <h3 className="text-center text-4xl text-gray-800 font-semibold lg:font-bold mb-8">Donation Form</h3>
+                    <div data-aos="zoom-in" className="card lg:card-side bg-[#eff0f7]  shadow-xl max-w-4xl mx-auto">
                         <figure className="w-full lg:w-2/4">
-                            <img
+                            <img data-aos="flip-left"
                                 src={formImg}
                                 alt="Donation"
                                 className="object-cover w-full h-full"
@@ -121,10 +156,10 @@ const DonationDetails = () => {
                 </div>
 
             </div>
-            <footer className="mt-40">
+            <footer className="mt-48">
                 <Footer></Footer>
             </footer>
-            <ToastContainer position="top-center"  />
+            <ToastContainer position="top-center" />
         </div>
     );
 };

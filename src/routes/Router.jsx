@@ -10,9 +10,9 @@ import Register from "../components/Register/Register";
 import Error from "../components/Error/Error";
 import DonationDetails from "../pages/DonationDetails";
 import PrivateRouter from "./PrivateRouter";
-import Help from "../pages/Help";
 import Dashboard from "../components/Dashboard/Dashboard";
 import UpdateProfile from "../components/UpdateProfile/UpdateProfile";
+import HowItWorks from "../components/HowItWorks/HowItWorks";
   const router = createBrowserRouter([
     {
       path: "/",
@@ -30,7 +30,7 @@ import UpdateProfile from "../components/UpdateProfile/UpdateProfile";
         },
         {
           path:"/help",
-          element:<Help></Help>
+          element:<HowItWorks></HowItWorks>
         }
       ]
     },
@@ -45,7 +45,7 @@ import UpdateProfile from "../components/UpdateProfile/UpdateProfile";
     },
     {
       path: '/update-profile',
-      element: <UpdateProfile></UpdateProfile>,
+      element: <PrivateRouter><UpdateProfile></UpdateProfile></PrivateRouter>,
     },
     {
       path:"/auth",
