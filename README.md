@@ -17,15 +17,16 @@ Clean and responsive UI with animations.
 Dedicated help section to guide users through the donation process.  
 ## Tech Stack & npm Packages  
 ### Frontend
-React: Component-based UI development.
-React Router DOM: Routing and navigation management.
-AOS (Animate On Scroll): Smooth scroll animations.
-React Hot Toast: Notification system for user feedback.
-Tailwind CSS: Customizable utility-first CSS framework.
-daisyUI: UI components built on top of Tailwind CSS.
+React: Component-based UI development.  
+React Router DOM: Routing and navigation management.  
+AOS (Animate On Scroll): Smooth scroll animations.  
+React Hot Toast: Notification system for user feedback.  
+Tailwind CSS: Customizable utility-first CSS framework.  
+daisyUI: UI components built on top of Tailwind CSS.  
 ### Authentication
-Firebase: User authentication with email/password and Google.
-Development Utilities
-react-icons: Icon library for React components.
-Vite: Fast and optimized build tool.
-Surge: Simple static site hosting.
+Firebase: User authentication with email/password and Google.  
+Development Utilities  
+react-icons: Icon library for React components.  
+Vite: Fast and optimized build tool.  
+Surge: Simple static site hosting.  
+
