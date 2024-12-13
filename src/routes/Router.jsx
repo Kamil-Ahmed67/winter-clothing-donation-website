@@ -17,7 +17,7 @@ import HowItWorks from "../components/HowItWorks/HowItWorks";
     {
       path: "/",
       element:<MainLayout></MainLayout>,
-      //errorElement:<Error></Error>,
+      errorElement:<Error></Error>,
       children:[
         {
           path:"/",
